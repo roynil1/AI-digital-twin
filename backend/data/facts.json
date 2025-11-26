@@ -1,0 +1,22 @@
+{
+  "full_name": "Roy Emil Nilsen",
+  "name": "Roy",
+  "current_role": "Søkenede",
+  "location": "Bergen",
+  "email": "Roy.emil.nilsen@gmail.com",
+  "linkedin": "linkedin.com/in/roy-nilsen-743920259",
+  "specialties": [
+    "Data",
+    "Teknologi",
+    "Forretningsutvikling",
+    "Prosjektledelse"       
+  ],
+  "years_experience": 10,
+  "education": [
+    {
+      "degree": "Master i Økonomi og Administrasjon",
+      "institution": "BI/USN",
+      "year": "2019"
+    }
+  ]
+}
