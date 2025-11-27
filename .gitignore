@@ -1,5 +1,5 @@
 # ------------------------------------------------------------
-# GLOBAL .gitignore FOR FULLSTACK (Next.js + Python)
+# GLOBAL .gitignore FOR FULLSTACK (Next.js + Python + Terraform + AWS)
 # ------------------------------------------------------------
 
 # ============================================================
@@ -9,7 +9,7 @@
 # Dependencies
 node_modules/
 
-# Next.js build directories
+# Build output
 .next/
 out/
 build/
@@ -19,25 +19,21 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-
-# Environment files
-.env
-.env.*
-*.env
-
-# Local environment overrides
-.vercel
+*.log
 
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# Vercel
+.vercel
 
 
 # ============================================================
 # PYTHON (BACKEND)
 # ============================================================
 
-# Virtual environment
+# Virtual environments
 .venv/
 venv/
 env/
@@ -47,17 +43,63 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Python packaging
+# Packaging / build
 *.egg-info/
 *.egg
 dist/
 build/
 pip-wheel-metadata/
 
-# Python env files
+
+# ============================================================
+# ENVIRONMENT FILES (SECRETS)
+# ============================================================
+
 .env
 .env.*
 *.env
+
+# Allow example env file
+!.env.example
+
+
+# ============================================================
+# AWS LAMBDA
+# ============================================================
+
+lambda-deployment.zip
+lambda-package/
+
+
+# ============================================================
+# TERRAFORM
+# ============================================================
+
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate.d/
+
+*.tfvars
+*.tfvars.secret
+
+!terraform.tfvars
+!prod.tfvars
+
+
+# ============================================================
+# AWS LOCAL CREDENTIALS (SECURITY)
+# ============================================================
+
+.aws/
+
+
+# ============================================================
+# MEMORY / RUNTIME DATA
+# ============================================================
+
+memory/
 
 
 # ============================================================
@@ -67,22 +109,14 @@ pip-wheel-metadata/
 # VS Code
 .vscode/
 
+# JetBrains (WebStorm, PyCharm, IntelliJ)
+.idea/
+
+# Vim / terminal editors
+*.swp
+
 # macOS
 .DS_Store
 
 # Windows
 Thumbs.db
-
-
-# ============================================================
-# Lmabda Deployment Artifacts
-# ============================================================
-
-
-
-lambda-deployment.zip
-lambda-package/
-# ------------------------------------------------------------
-# END
-# ------------------------------------------------------------
-
